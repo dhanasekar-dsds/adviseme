@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  background: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.advice-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.advice-title {
+  font-size: 1.5rem;
+  color: #00ffc8;
+  margin-bottom: 1rem;
+}
+
+.advice-text {
+  font-size: 3rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+
+  background: linear-gradient(120deg, #ffffff 0%, #b0f0ff 50%, #ffffff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmer 2.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.advice-btn {
+  background: rgba(0, 255, 200, 0.15);
+  border: 1px solid rgba(0, 255, 200, 0.5);
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #00ffc8;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.advice-btn:hover {
+  background: rgba(0, 255, 200, 0.25);
+  border-color: #00ffc8;
+}
+
+.advice-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-bar-container {
+  width: 100%;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.loading-bar {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border-radius: 3px;
+  animation: loadingAnim 1.2s ease-in-out infinite;
+  transform-origin: left;
+}
+
+@keyframes loadingAnim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0.6;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .advice-card {
+    padding: 1.5rem;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .advice-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .advice-text {
+    font-size: 2rem;
+    margin: 0.8rem 0;
+    line-height: 1.4;
+  }
+
+  .advice-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .loading-bar-container {
+    height: 5px;
+    margin: 0.8rem 0;
+  }
+
+  .loading-bar {
+    height: 100%;
+  }
+}
