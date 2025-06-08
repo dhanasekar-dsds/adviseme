@@ -4,7 +4,6 @@ A sleek React app that fetches and displays random advice using the free Advice 
 
 ## Features
 
-- Fetches fresh random advice from https://api.adviceslip.com/advice  
 - Modern dark glassmorphism UI  
 - Animated shimmering gradient text for advice  
 - Smooth loading progress bar when fetching new advice  
